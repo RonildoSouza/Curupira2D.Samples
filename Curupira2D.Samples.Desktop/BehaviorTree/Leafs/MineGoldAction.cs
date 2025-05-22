@@ -43,7 +43,7 @@ namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
             if (!_goldMineControllerSystem.ThereIsGoldAvailable(blackboard.Get<string>("NearbyGoldMineEntityUniqueId")))
             {
                 _minerControllerSystem.MinerState.CurrentMinerAction = MinerState.MinerAction.Idle;
-                blackboard.Remove("NearbyGoldMine", false);
+                blackboard.Remove("NearbyGoldMinePath");
                 return Success();
             }
 

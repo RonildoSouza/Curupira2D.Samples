@@ -32,6 +32,9 @@
     <None Update="Content\UI\Images\AetherPhysics2DHelloWorldScene.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Content\UI\Images\BehaviorTreeAndPathfinderScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Content\UI\Images\CameraScene.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

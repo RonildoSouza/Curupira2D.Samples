@@ -13,11 +13,13 @@ using System.Diagnostics;
 using System.Linq;
 using TiledLib;
 using TiledLib.Layer;
+using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
 
 namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
 {
     public class PathfindingNearbyGoldMineAction(Scene scene) : Leaf
     {
+        private readonly MinerControllerSystem _minerControllerSystem = scene.GetSystem<MinerControllerSystem>();
         private static GridGraph _gridGraph;
         private static Map _map;
 
@@ -46,7 +48,10 @@ namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
                 .OrderBy(_ => _.UniqueId).ToArray();
 
             if (goldMineEntities == null || goldMineEntities.Length == 0)
+            {
+                _minerControllerSystem.MinerState.CurrentMinerAction = MinerState.MinerAction.GoHome;
                 return Failure();
+            }
 
             // Find path with A* algorithm
             var start = scene.GetEntity("miner").Position.Vector2ToGridGraphPoint(_map, scene);

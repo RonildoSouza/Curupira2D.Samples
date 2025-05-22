@@ -47,19 +47,28 @@
 					</HorizontalStackPanel>
 				</Button>
 
-				<Button Id="QuadtreeCheckCollisionButton" Grid.Row="3" Grid.Column="0" Width="370" Height="100" VerticalAlignment="Center">
+				<HorizontalStackPanel Spacing="8" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+				<Button Id="QuadtreeCheckCollisionButton" Width="245" Height="100" VerticalAlignment="Center">
 					<HorizontalStackPanel Spacing="10" HorizontalAlignment="Left" Padding="4">
 						<Image Renderable="Images/QuadtreeCheckCollisionScene.png" Width="100" Height="100"/>
 						<Label Text="Quadtree Check Collision" HorizontalAlignment="Center" VerticalAlignment="Center" Wrap="True" />
 					</HorizontalStackPanel>
 				</Button>
 
-				<Button Id="MassivelyMultiplayerOnlineButton" Grid.Row="3" Grid.Column="1" Width="370" Height="100" VerticalAlignment="Center">
+				<Button Id="MassivelyMultiplayerOnlineButton" Width="245" Height="100" VerticalAlignment="Center">
 					<HorizontalStackPanel Spacing="10" HorizontalAlignment="Left" Padding="4">
 						<Image Renderable="Images/MassivelyMultiplayerOnlineScene.png" Width="100" Height="100"/>
 						<Label Text="Massively Multiplayer Online (MMO)" HorizontalAlignment="Center" VerticalAlignment="Center" Wrap="True" />
 					</HorizontalStackPanel>
 				</Button>
+
+				<Button Id="BehaviorTreeAndPathfinderSceneButton" Width="245" Height="100" VerticalAlignment="Center">
+					<HorizontalStackPanel Spacing="10" HorizontalAlignment="Left" Padding="4">
+						<Image Renderable="Images/BehaviorTreeAndPathfinderScene.png" Width="100" Height="100"/>
+						<Label Text="Behavior Tree And Pathfinder" HorizontalAlignment="Center" VerticalAlignment="Center" Wrap="True" />
+					</HorizontalStackPanel>
+				</Button>
+				</HorizontalStackPanel>
 
 				<HorizontalStackPanel Spacing="8" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
 					<Button Id="TiledMapWithManyLayersButton" Width="245" Height="100" VerticalAlignment="Center">

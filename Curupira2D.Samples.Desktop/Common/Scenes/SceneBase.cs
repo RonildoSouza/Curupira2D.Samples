@@ -18,13 +18,13 @@ namespace Curupira2D.Samples.Desktop.Common.Scenes
             var posX = x ?? ScreenWidth * 0.23f;
             var posY = y ?? ScreenHeight - textComponent.TextSize.Y * scale.Y;
 
-            CreateEntity(Guid.NewGuid().ToString().Substring(0, 6), posX, posY, isCollidable: false)
+            CreateEntity(Guid.NewGuid().ToString()[..6], posX, posY, isCollidable: false)
                 .AddComponent(textComponent);
 
             return textComponent;
         }
 
         protected void ShowControlTips(string text, float? x = null, float? y = null, Color? color = null, Vector2 scale = default) =>
-            ShowText($"*RETURN TO MENU: Key Q or Backspace*\n\nCONTROLS\n{text}", x, y, color, scale);
+            ShowText($"*RETURN TO MENU: Key Q or Backspace*{(string.IsNullOrEmpty(text) ? "" : $"\n\nCONTROLS\n{text}")}", x, y, color, scale);
     }
 }

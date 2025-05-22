@@ -1,7 +1,7 @@
 ﻿using Curupira2D.AI.BehaviorTree;
 using Curupira2D.AI.BehaviorTree.Leafs;
-using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
 using Curupira2D.ECS;
+using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
 using System;
 
 namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
@@ -13,6 +13,14 @@ namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
 
         public override BehaviorState Update(IBlackboard blackboard)
         {
+            if (!scene.ExistsEntities(_ => _.Group == "goldMines" && _.Active))
+            {
+                _minerControllerSystem.MinerState.Energy = 0;
+                _minerControllerSystem.MinerState.InventoryCapacity = 0;
+                _minerControllerSystem.MinerState.CurrentMinerAction = MinerState.MinerAction.Sleep;
+                return Running();
+            }
+
             if (!_minerControllerSystem.MinerState.IsFatigued)
                 return Failure();
 

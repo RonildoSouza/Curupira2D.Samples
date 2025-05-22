@@ -25,7 +25,7 @@ namespace Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder
 
         public void LoadContent()
         {
-            _pixelTexture = Scene.GameCore.GraphicsDevice.CreateTextureRectangle(16, Color.Red * 0.5f);
+            _pixelTexture = Scene.GameCore.GraphicsDevice.CreateTextureCircle(4, Color.Red * 0.5f);
 
             _movementSpriteAnimationComponent = new SpriteAnimationComponent(
                 texture: Scene.GameCore.Content.Load<Texture2D>("AI/GoblinSpritesheetWalking"),
@@ -51,18 +51,24 @@ namespace Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder
                 .AddComponent(_movementSpriteAnimationComponent);
 
             _textComponent = ((SceneBase)Scene).ShowText($"Energy: {MinerState.Energy.ToString().PadLeft(3, '0')}" +
-                $"\nInventory Capacity: {MinerState.InventoryCapacity.ToString().PadLeft(2, '0')}");
+                $"\nInventory Capacity: {MinerState.InventoryCapacity.ToString().PadLeft(2, '0')}" +
+                $"\nMiner Action: {MinerState.CurrentMinerAction}",
+                x: 100f,
+                color: Color.White,
+                scale: new Vector2(0.4f));
         }
 
         public void Update()
         {
+            StopAnimation();
             PlayMovementAnimation();
             PlayMineAnimation();
             PlaySleepAnimation();
             HorizontalFlipMinerAnimation();
 
             _textComponent.Text = $"Energy: {MinerState.Energy.ToString().PadLeft(3, '0')}" +
-                    $"\nInventory Capacity: {MinerState.InventoryCapacity.ToString().PadLeft(2, '0')}";
+                $"\nInventory Capacity: {MinerState.InventoryCapacity.ToString().PadLeft(2, '0')}" +
+                $"\nMiner Action: {MinerState.CurrentMinerAction}";
         }
 
         public void Draw(ref IReadOnlyList<Entity> entities)
@@ -77,24 +83,31 @@ namespace Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder
             };
 
             for (int i = 0; i < path?.Count(); i++)
-                Scene.SpriteBatch.Draw(_pixelTexture, path.ElementAt(i), null, Color.White, 0f, new Vector2(8f), 1f, SpriteEffects.None, 0.02f);
+                Scene.SpriteBatch.Draw(_pixelTexture, path.ElementAt(i), null, Color.White, 0f, new Vector2(_pixelTexture.Width * 0.5f), 1f, SpriteEffects.None, 0.02f);
         }
 
         private void PlayMovementAnimation()
         {
-            if (_movementSpriteAnimationComponent.IsPlaying
-                && (MinerState.CurrentMinerAction == MinerState.MinerAction.Idle || MinerState.CurrentMinerAction == MinerState.MinerAction.Sleep))
-            {
-                _movementSpriteAnimationComponent.IsPlaying = false;
-                _mineSpriteAnimationComponent.IsPlaying = false;
-            }
-
             if (!_movementSpriteAnimationComponent.IsPlaying
                 && (MinerState.CurrentMinerAction == MinerState.MinerAction.GoToMine
                     || MinerState.CurrentMinerAction == MinerState.MinerAction.GoHome
                     || MinerState.CurrentMinerAction == MinerState.MinerAction.GoToDeposit))
             {
                 _movementSpriteAnimationComponent.IsPlaying = true;
+                _mineSpriteAnimationComponent.IsPlaying = false;
+
+                _miner.RemoveComponent<SpriteAnimationComponent>();
+                _miner.AddComponent(_movementSpriteAnimationComponent);
+            }
+        }
+
+        private void StopAnimation()
+        {
+            if ((_movementSpriteAnimationComponent.IsPlaying || _mineSpriteAnimationComponent.IsPlaying)
+                && (MinerState.CurrentMinerAction == MinerState.MinerAction.Idle
+                    || MinerState.CurrentMinerAction == MinerState.MinerAction.Sleep))
+            {
+                _movementSpriteAnimationComponent.IsPlaying = false;
                 _mineSpriteAnimationComponent.IsPlaying = false;
 
                 _miner.RemoveComponent<SpriteAnimationComponent>();

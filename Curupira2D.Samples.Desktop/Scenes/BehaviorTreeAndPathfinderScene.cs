@@ -1,8 +1,9 @@
 ﻿using Curupira2D.AI.BehaviorTree;
-using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
-using Curupira2D.Samples.Desktop.Systems.TiledMap;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Samples.Desktop.Common.Scenes;
+using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
+using Curupira2D.Samples.Desktop.Systems.Camera;
+using Curupira2D.Samples.Desktop.Systems.TiledMap;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -21,9 +22,7 @@ namespace Curupira2D.Samples.Desktop.Scenes
             AddSystem<GoldMineControllerSystem>();
             AddSystem(new MapSystem("AI/BehaviorTreeAndPathfinderTiledMap.tmx", "AI/BehaviorTreeAndPathfinderTileset"));
 
-
-
-
+            ShowControlTips(string.Empty, y: 50f, color: Color.White);
 
             var boatSpriteAnimationComponent = new SpriteAnimationComponent(
                 texture: GameCore.Content.Load<Texture2D>("AI/BoatSpriteSheet"),
