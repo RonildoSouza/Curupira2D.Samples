@@ -1,17 +1,17 @@
 ﻿using Curupira2D.AI.BehaviorTree;
-using Curupira2D.Desktop.Samples.BTree.Conditions;
-using Curupira2D.Desktop.Samples.BTree.Leafs;
 using Curupira2D.ECS;
 using Curupira2D.ECS.Components;
 using Curupira2D.ECS.Systems;
 using Curupira2D.ECS.Systems.Attributes;
+using Curupira2D.Samples.Desktop.BehaviorTree.Conditions;
+using Curupira2D.Samples.Desktop.BehaviorTree.Leafs;
 
-namespace Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder
+namespace Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder
 {
     [RequiredComponent(typeof(BehaviorTreeMinerControllerSystem), typeof(DumpComponent))]
     public class BehaviorTreeMinerControllerSystem(IBlackboard blackboard) : ECS.System, ILoadable, IUpdatable
     {
-        BehaviorTree _behaviorTree;
+        AI.BehaviorTree.BehaviorTree _behaviorTree;
 
         public void LoadContent()
         {

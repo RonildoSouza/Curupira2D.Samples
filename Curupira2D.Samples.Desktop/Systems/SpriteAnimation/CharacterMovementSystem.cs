@@ -1,10 +1,10 @@
-﻿using Curupira2D.Desktop.Samples.Common.Systems;
+﻿using Curupira2D.Samples.Desktop.Common.Systems;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems.Attributes;
 using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
 
-namespace Curupira2D.Desktop.Samples.Systems.SpriteAnimation
+namespace Curupira2D.Samples.Desktop.Systems.SpriteAnimation
 {
     [RequiredComponent(typeof(CharacterMovementSystem), typeof(SpriteAnimationComponent))]
     class CharacterMovementSystem : EntityMovementSystemBase

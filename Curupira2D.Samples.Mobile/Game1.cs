@@ -1,6 +1,6 @@
-﻿using Curupira2D.Mobile.Samples.Scenes;
+﻿using Curupira2D.Samples.Mobile.Scenes;
 
-namespace Curupira2D.Mobile.Samples
+namespace Curupira2D.Samples.Mobile
 {
     public class Game1 : GameCore
     {

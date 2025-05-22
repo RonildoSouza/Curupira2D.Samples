@@ -3,7 +3,7 @@ using Curupira2D.AI.BehaviorTree.Leafs;
 using Curupira2D.AI.Extensions;
 using Curupira2D.AI.Pathfinding.AStar;
 using Curupira2D.AI.Pathfinding.Graphs;
-using Curupira2D.Desktop.Samples.Systems.TiledMap;
+using Curupira2D.Samples.Desktop.Systems.TiledMap;
 using Curupira2D.ECS;
 using Curupira2D.Extensions.Pathfinding;
 using Curupira2D.Extensions.TiledMap;
@@ -15,7 +15,7 @@ using TiledLib;
 using TiledLib.Layer;
 using TiledLib.Objects;
 
-namespace Curupira2D.Desktop.Samples.BTree.Leafs
+namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
 {
     public abstract class BasePathfindingStartingNearbyGoldMineAction(Scene scene, string bbPathfindKey, string pointObjectName) : Leaf
     {

@@ -24,8 +24,8 @@
     <PackageReference Include="Myra" Version="1.5.9" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Curupira2D.GameComponents\Curupira2D.GameComponents.csproj" />
-    <ProjectReference Include="..\..\src\Curupira2D\Curupira2D.csproj" />
+    <ProjectReference Include="..\Curupira2D\src\Curupira2D.GameComponents\Curupira2D.GameComponents.csproj" />
+    <ProjectReference Include="..\Curupira2D\src\Curupira2D\Curupira2D.csproj" />
     <ProjectReference Include="..\WebSocket\WebSocketClient\WebSocketClient.csproj" />
   </ItemGroup>
   <ItemGroup>

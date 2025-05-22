@@ -2,16 +2,16 @@
  * https://github.com/tainicom/Aether.Physics2D/blob/master/Samples/HelloWorld/Game1.cs
  */
 
-using Curupira2D.Desktop.Samples.Common.Scenes;
 using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Components.Physics;
 using Curupira2D.Extensions;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Scenes
+namespace Curupira2D.Samples.Desktop.Scenes
 {
     class AetherPhysics2DHelloWorldScene : SceneBase
     {

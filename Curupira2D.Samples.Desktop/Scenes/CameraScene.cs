@@ -1,10 +1,10 @@
-﻿using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Systems.Camera;
+﻿using Curupira2D.Samples.Desktop.Systems.Camera;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Extensions;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 
-namespace Curupira2D.Desktop.Samples.Scenes
+namespace Curupira2D.Samples.Desktop.Scenes
 {
     class CameraScene : SceneBase
     {

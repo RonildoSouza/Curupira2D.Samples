@@ -1,13 +1,13 @@
 ﻿using AssetManagementBase;
-using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Scenes.TiledMap;
+using Curupira2D.Samples.Desktop.Scenes.TiledMap;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Myra;
 using Myra.Graphics2D.UI;
 using System.IO;
 
-namespace Curupira2D.Desktop.Samples.Scenes
+namespace Curupira2D.Samples.Desktop.Scenes
 {
     class MenuScene : SceneBase
     {

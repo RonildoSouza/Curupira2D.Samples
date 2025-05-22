@@ -4,7 +4,7 @@ using Android.OS;
 using Android.Views;
 using Microsoft.Xna.Framework;
 
-namespace Curupira2D.Mobile.Samples
+namespace Curupira2D.Samples.Mobile
 {
     [Activity(
         Label = "@string/app_name",

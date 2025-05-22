@@ -6,7 +6,7 @@ using Curupira2D.ECS.Systems.Attributes;
 using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
 
-namespace Curupira2D.Desktop.Samples.Systems.TiledMap
+namespace Curupira2D.Samples.Desktop.Systems.TiledMap
 {
     [RequiredComponent(typeof(IsometricGravityBallSystem), typeof(BodyComponent))]
     class IsometricGravityBallSystem : ECS.System, ILoadable

@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Systems.TiledMap
+namespace Curupira2D.Samples.Desktop.Systems.TiledMap
 {
     [RequiredComponent(typeof(IsometricBicycleAnimationSystem), [typeof(SpriteAnimationComponent), typeof(BodyComponent)])]
     class IsometricBicycleAnimationSystem : ECS.System, ILoadable, IUpdatable

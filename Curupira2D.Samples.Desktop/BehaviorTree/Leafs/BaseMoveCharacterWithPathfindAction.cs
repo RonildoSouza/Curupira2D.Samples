@@ -1,6 +1,6 @@
 ﻿using Curupira2D.AI.BehaviorTree;
 using Curupira2D.AI.BehaviorTree.Leafs;
-using Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder;
+using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
 using Curupira2D.ECS;
 using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Curupira2D.Desktop.Samples.BTree.Leafs
+namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
 {
     public abstract class BaseMoveCharacterWithPathfindAction(Scene scene, string entityUniqueId, string bbPathfindKey) : Leaf
     {

@@ -1,12 +1,12 @@
 ﻿using Curupira2D.AI.BehaviorTree;
-using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder;
-using Curupira2D.Desktop.Samples.Systems.TiledMap;
+using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
+using Curupira2D.Samples.Desktop.Systems.TiledMap;
 using Curupira2D.ECS.Components.Drawables;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Curupira2D.Desktop.Samples.Scenes
+namespace Curupira2D.Samples.Desktop.Scenes
 {
     class BehaviorTreeAndPathfinderScene : SceneBase
     {

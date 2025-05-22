@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Systems.TiledMap
+namespace Curupira2D.Samples.Desktop.Systems.TiledMap
 {
     [RequiredComponent(typeof(CharacterMovementSystem), [typeof(SpriteComponent), typeof(BodyComponent)])]
     class CharacterMovementSystem : ECS.System, ILoadable, IUpdatable

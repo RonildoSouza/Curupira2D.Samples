@@ -1,13 +1,13 @@
 ﻿using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Extensions;
-using Curupira2D.Mobile.Samples.Scenes;
+using Curupira2D.Samples.Mobile.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using System.Linq;
 
-namespace Curupira2D.Mobile.Samples.Common.Scenes
+namespace Curupira2D.Samples.Mobile.Common.Scenes
 {
     public abstract class SceneBase(bool activeReturnButton = true) : Scene
     {

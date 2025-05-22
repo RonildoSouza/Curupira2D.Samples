@@ -1,13 +1,12 @@
-﻿using Curupira2D.Mobile.Samples.Common.Scenes;
+﻿using Curupira2D.Samples.Mobile.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Myra;
-using Myra.Graphics2D.Brushes;
 using Myra.Graphics2D.TextureAtlases;
 using Myra.Graphics2D.UI;
 using System;
 
-namespace Curupira2D.Mobile.Samples.Scenes
+namespace Curupira2D.Samples.Mobile.Scenes
 {
     public class MenuScene : SceneBase
     {

@@ -6,7 +6,7 @@ using Curupira2D.AI.Pathfinding.Graphs;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace Curupira2D.Console.Samples.AI
+namespace Curupira2D.Samples.Console.AI
 {
     public static class PathfindingTest
     {

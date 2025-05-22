@@ -1,7 +1,7 @@
 ﻿using Curupira2D.AI.BehaviorTree;
 using Curupira2D.AI.BehaviorTree.Leafs;
 
-namespace Curupira2D.Console.Samples.AI
+namespace Curupira2D.Samples.Console.AI
 {
     public static class BehaviorTreeTest
     {

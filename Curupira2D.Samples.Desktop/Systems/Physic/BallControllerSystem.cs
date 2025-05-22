@@ -7,7 +7,7 @@ using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Systems.Physic
+namespace Curupira2D.Samples.Desktop.Systems.Physic
 {
     [RequiredComponent(typeof(BallControllerSystem), typeof(SpriteComponent))]
     class BallControllerSystem : ECS.System, ILoadable, IUpdatable

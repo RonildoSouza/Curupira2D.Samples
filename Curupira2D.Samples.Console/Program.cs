@@ -1,4 +1,4 @@
-﻿using Curupira2D.Console.Samples.AI;
+﻿using Curupira2D.Samples.Console.AI;
 
 while (true)
 {

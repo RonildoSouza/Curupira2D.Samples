@@ -5,7 +5,7 @@ using Curupira2D.ECS.Systems.Attributes;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Systems.SpriteAnimation
+namespace Curupira2D.Samples.Desktop.Systems.SpriteAnimation
 {
     [RequiredComponent(typeof(CharacterAnimationSystem), typeof(SpriteAnimationComponent))]
     class CharacterAnimationSystem : ECS.System, ILoadable, IUpdatable

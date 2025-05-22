@@ -1,11 +1,11 @@
-﻿using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Systems.Camera;
-using Curupira2D.Desktop.Samples.Systems.TiledMap;
+﻿using Curupira2D.Samples.Desktop.Systems.Camera;
+using Curupira2D.Samples.Desktop.Systems.TiledMap;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace Curupira2D.Desktop.Samples.Scenes.TiledMap
+namespace Curupira2D.Samples.Desktop.Scenes.TiledMap
 {
     class IsometricGravityTiledMapScene : SceneBase
     {

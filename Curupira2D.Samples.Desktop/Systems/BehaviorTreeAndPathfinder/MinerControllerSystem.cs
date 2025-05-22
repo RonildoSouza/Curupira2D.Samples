@@ -1,16 +1,16 @@
 ﻿using Curupira2D.AI.BehaviorTree;
-using Curupira2D.Desktop.Samples.Common.Scenes;
 using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems;
 using Curupira2D.ECS.Systems.Attributes;
 using Curupira2D.Extensions;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder
+namespace Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder
 {
     [RequiredComponent(typeof(MinerControllerSystem), typeof(SpriteAnimationComponent))]
     public class MinerControllerSystem(IBlackboard blackboard) : ECS.System, ILoadable, IUpdatable, IRenderable

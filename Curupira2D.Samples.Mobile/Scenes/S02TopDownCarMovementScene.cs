@@ -2,11 +2,11 @@
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Components.Physics;
 using Curupira2D.GameComponents.Joystick;
-using Curupira2D.Mobile.Samples.Common.Scenes;
+using Curupira2D.Samples.Mobile.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Curupira2D.Mobile.Samples.Scenes
+namespace Curupira2D.Samples.Mobile.Scenes
 {
     public class S02TopDownCarMovementScene : SceneBase
     {
@@ -71,8 +71,8 @@ namespace Curupira2D.Mobile.Samples.Scenes
             // Change Angle
             if (_touchJoystickComponent.Direction.X != 0)
             {
-                if ((_touchJoystickComponent.Direction.X == -1 && _bodyComponent.AngularVelocity < 0.5f)
-                    || (_touchJoystickComponent.Direction.X == 1 && _bodyComponent.AngularVelocity > -0.5f))
+                if (_touchJoystickComponent.Direction.X == -1 && _bodyComponent.AngularVelocity < 0.5f
+                    || _touchJoystickComponent.Direction.X == 1 && _bodyComponent.AngularVelocity > -0.5f)
                     _bodyComponent.ApplyAngularImpulse(_touchJoystickComponent.Direction.X * -angularImpulse);
             }
             else

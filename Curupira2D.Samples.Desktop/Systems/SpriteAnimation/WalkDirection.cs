@@ -1,4 +1,4 @@
-﻿namespace Curupira2D.Desktop.Samples.Systems.SpriteAnimation
+﻿namespace Curupira2D.Samples.Desktop.Systems.SpriteAnimation
 {
     enum WalkDirection
     {

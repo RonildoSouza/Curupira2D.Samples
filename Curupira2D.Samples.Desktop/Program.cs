@@ -1,3 +1,3 @@
 ﻿
-using var game = new Curupira2D.Desktop.Samples.Game1();
+using var game = new Curupira2D.Samples.Desktop.Game1();
 game.Run();

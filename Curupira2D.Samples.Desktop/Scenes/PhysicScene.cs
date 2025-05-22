@@ -1,7 +1,7 @@
-﻿using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Systems.Physic;
+﻿using Curupira2D.Samples.Desktop.Systems.Physic;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 
-namespace Curupira2D.Desktop.Samples.Scenes
+namespace Curupira2D.Samples.Desktop.Scenes
 {
     class PhysicScene : SceneBase
     {

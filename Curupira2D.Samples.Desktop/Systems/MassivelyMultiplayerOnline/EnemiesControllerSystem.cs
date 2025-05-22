@@ -1,5 +1,5 @@
-﻿using Curupira2D.Desktop.Samples.Models.MassivelyMultiplayerOnline;
-using Curupira2D.Desktop.Samples.Scenes;
+﻿using Curupira2D.Samples.Desktop.Models.MassivelyMultiplayerOnline;
+using Curupira2D.Samples.Desktop.Scenes;
 using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems;
@@ -8,7 +8,7 @@ using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
-namespace Curupira2D.Desktop.Samples.Systems.MassivelyMultiplayerOnline
+namespace Curupira2D.Samples.Desktop.Systems.MassivelyMultiplayerOnline
 {
     [RequiredComponent(typeof(EnemiesControllerSystem), typeof(SpriteComponent))]
     class EnemiesControllerSystem : ECS.System, ILoadable

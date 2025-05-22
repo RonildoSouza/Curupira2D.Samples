@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder
+namespace Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder
 {
     [RequiredComponent(typeof(GoldMineControllerSystem), typeof(SpriteComponent))]
     class GoldMineControllerSystem : ECS.System, ILoadable, IUpdatable

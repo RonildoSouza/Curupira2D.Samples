@@ -5,7 +5,7 @@ using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Common.Systems
+namespace Curupira2D.Samples.Desktop.Common.Systems
 {
     abstract class EntityMovementSystemBase : ECS.System, ILoadable, IUpdatable
     {

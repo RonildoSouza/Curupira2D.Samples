@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Curupira2D.Desktop.Samples.Models.MassivelyMultiplayerOnline
+namespace Curupira2D.Samples.Desktop.Models.MassivelyMultiplayerOnline
 {
     internal class EnemyData
     {

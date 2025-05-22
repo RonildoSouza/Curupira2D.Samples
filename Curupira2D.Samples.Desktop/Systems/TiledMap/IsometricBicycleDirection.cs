@@ -1,4 +1,4 @@
-﻿namespace Curupira2D.Desktop.Samples.Systems.TiledMap
+﻿namespace Curupira2D.Samples.Desktop.Systems.TiledMap
 {
     enum IsometricBicycleDirection
     {

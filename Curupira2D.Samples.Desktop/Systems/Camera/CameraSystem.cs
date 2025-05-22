@@ -6,7 +6,7 @@ using Curupira2D.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Systems.Camera
+namespace Curupira2D.Samples.Desktop.Systems.Camera
 {
     [RequiredComponent(typeof(CameraSystem), typeof(SpriteComponent))]
     class CameraSystem(bool moveWithKeyboard, bool enabledRotation = true) : ECS.System, ILoadable, IUpdatable

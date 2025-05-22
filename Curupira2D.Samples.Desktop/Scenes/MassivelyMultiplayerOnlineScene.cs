@@ -1,8 +1,8 @@
-﻿using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Systems.MassivelyMultiplayerOnline;
+﻿using Curupira2D.Samples.Desktop.Systems.MassivelyMultiplayerOnline;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using WebSocketClient;
 
-namespace Curupira2D.Desktop.Samples.Scenes
+namespace Curupira2D.Samples.Desktop.Scenes
 {
     class MassivelyMultiplayerOnlineScene : SceneBase
     {

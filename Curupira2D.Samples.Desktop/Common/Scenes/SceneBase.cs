@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace Curupira2D.Desktop.Samples.Common.Scenes
+namespace Curupira2D.Samples.Desktop.Common.Scenes
 {
     abstract class SceneBase : Scene
     {

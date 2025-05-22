@@ -1,15 +1,15 @@
-﻿using Curupira2D.Desktop.Samples.Common.Scenes;
-using Curupira2D.Desktop.Samples.Common.Systems;
+﻿using Curupira2D.Samples.Desktop.Common.Systems;
 using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems.Attributes;
 using Curupira2D.Extensions;
+using Curupira2D.Samples.Desktop.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Linq;
 
-namespace Curupira2D.Desktop.Samples.Systems.Quadtree
+namespace Curupira2D.Samples.Desktop.Systems.Quadtree
 {
     [RequiredComponent(typeof(QuadtreeCheckCollisionSystem), typeof(SpriteComponent))]
     class QuadtreeCheckCollisionSystem : EntityMovementSystemBase

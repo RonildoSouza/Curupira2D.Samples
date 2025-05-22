@@ -19,6 +19,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Desktop"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Mobile", "Curupira2D.Samples.Mobile\Curupira2D.Samples.Mobile.csproj", "{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Curupira2D", "Curupira2D", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.AI", "Curupira2D\src\Curupira2D.AI\Curupira2D.AI.csproj", "{C06406CF-4864-B9E5-A41F-3FEF188931C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.GameComponents", "Curupira2D\src\Curupira2D.GameComponents\Curupira2D.GameComponents.csproj", "{124C811C-8AF5-0861-7139-851CD8C0719A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D", "Curupira2D\src\Curupira2D\Curupira2D.csproj", "{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +51,18 @@ Global
 		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C06406CF-4864-B9E5-A41F-3FEF188931C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06406CF-4864-B9E5-A41F-3FEF188931C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06406CF-4864-B9E5-A41F-3FEF188931C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06406CF-4864-B9E5-A41F-3FEF188931C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{124C811C-8AF5-0861-7139-851CD8C0719A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{124C811C-8AF5-0861-7139-851CD8C0719A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{124C811C-8AF5-0861-7139-851CD8C0719A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{124C811C-8AF5-0861-7139-851CD8C0719A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +70,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8C1F2B1E-14C1-4919-B7FA-739D77E44AE1} = {7311327C-472B-413D-9ACF-5DEA84333700}
 		{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7} = {7311327C-472B-413D-9ACF-5DEA84333700}
+		{C06406CF-4864-B9E5-A41F-3FEF188931C3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{124C811C-8AF5-0861-7139-851CD8C0719A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7FBE376-4118-4915-9F60-A6E7253981BD}

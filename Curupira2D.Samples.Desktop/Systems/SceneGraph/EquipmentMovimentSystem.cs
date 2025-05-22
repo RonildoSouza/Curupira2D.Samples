@@ -1,11 +1,11 @@
-﻿using Curupira2D.Desktop.Samples.Components.SceneGraph;
+﻿using Curupira2D.Samples.Desktop.Components.SceneGraph;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems;
 using Curupira2D.ECS.Systems.Attributes;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Curupira2D.Desktop.Samples.Systems.SceneGraph
+namespace Curupira2D.Samples.Desktop.Systems.SceneGraph
 {
     [RequiredComponent(typeof(EquipmentMovimentSystem), typeof(EquipmentComponent))]
     class EquipmentMovimentSystem : ECS.System, ILoadable, IUpdatable

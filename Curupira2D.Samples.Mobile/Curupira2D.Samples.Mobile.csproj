@@ -13,7 +13,7 @@
     <PackageReference Include="Myra" Version="1.5.9" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Curupira2D\Curupira2D.csproj" />
+    <ProjectReference Include="..\Curupira2D\src\Curupira2D\Curupira2D.csproj" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />

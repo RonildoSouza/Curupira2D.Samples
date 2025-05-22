@@ -1,9 +1,9 @@
 ﻿using Curupira2D.AI.BehaviorTree;
 using Curupira2D.AI.BehaviorTree.Leafs;
-using Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder;
+using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
 using Curupira2D.ECS;
 
-namespace Curupira2D.Desktop.Samples.BTree.Conditions
+namespace Curupira2D.Samples.Desktop.BehaviorTree.Conditions
 {
     public class ThereIsGoldAvailableCondition(Scene scene) : Leaf
     {

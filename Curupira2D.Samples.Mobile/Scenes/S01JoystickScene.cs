@@ -2,11 +2,11 @@
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Extensions;
 using Curupira2D.GameComponents.Joystick;
-using Curupira2D.Mobile.Samples.Common.Scenes;
+using Curupira2D.Samples.Mobile.Common.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Curupira2D.Mobile.Samples.Scenes
+namespace Curupira2D.Samples.Mobile.Scenes
 {
     public class S01JoystickScene : SceneBase
     {

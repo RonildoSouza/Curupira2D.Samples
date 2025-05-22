@@ -1,9 +1,9 @@
-﻿using Curupira2D.Desktop.Samples.Systems.BehaviorTreeAndPathfinder;
+﻿using Curupira2D.Samples.Desktop.Systems.BehaviorTreeAndPathfinder;
 using Curupira2D.ECS;
 using Curupira2D.Extensions;
 using Microsoft.Xna.Framework;
 
-namespace Curupira2D.Desktop.Samples.BTree.Leafs
+namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
 {
     public class MoveToGoldMineAction(Scene scene) : BaseMoveCharacterWithPathfindAction(scene, entityUniqueId: "miner", bbPathfindKey: "NearbyGoldMinePath")
     {
