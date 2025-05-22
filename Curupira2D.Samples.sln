@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSocket", "WebSocket", "{7311327C-472B-413D-9ACF-5DEA84333700}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSocketServer", "WebSocketServer", "{8C1F2B1E-14C1-4919-B7FA-739D77E44AE1}"
+	ProjectSection(SolutionItems) = preProject
+		..\WebSocket\WebSocketServer\index.js = ..\WebSocket\WebSocketServer\index.js
+		..\WebSocket\WebSocketServer\package.json = ..\WebSocket\WebSocketServer\package.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketClient", "WebSocket\WebSocketClient\WebSocketClient.csproj", "{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Console", "Curupira2D.Samples.Console\Curupira2D.Samples.Console.csproj", "{F5C1D2AB-D4A5-67BC-3875-FAE1FDBBC391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Desktop", "Curupira2D.Samples.Desktop\Curupira2D.Samples.Desktop.csproj", "{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Mobile", "Curupira2D.Samples.Mobile\Curupira2D.Samples.Mobile.csproj", "{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C1D2AB-D4A5-67BC-3875-FAE1FDBBC391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C1D2AB-D4A5-67BC-3875-FAE1FDBBC391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C1D2AB-D4A5-67BC-3875-FAE1FDBBC391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C1D2AB-D4A5-67BC-3875-FAE1FDBBC391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C1F2B1E-14C1-4919-B7FA-739D77E44AE1} = {7311327C-472B-413D-9ACF-5DEA84333700}
+		{4E14BF26-07FE-A721-2F3E-C464F1B8B5A7} = {7311327C-472B-413D-9ACF-5DEA84333700}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7FBE376-4118-4915-9F60-A6E7253981BD}
+	EndGlobalSection
+EndGlobal
