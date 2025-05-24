@@ -24,7 +24,7 @@ namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
             if (!_minerControllerSystem.MinerState.IsFatigued)
                 return Failure();
 
-            _elapsedTime += scene.ElapsedGameTime;
+            _elapsedTime += scene.GameTime.ElapsedGameTime;
             if (_minerControllerSystem.MinerState.CurrentMinerAction == MinerState.MinerAction.Idle && _minerControllerSystem.MinerState.IsFatigued)
             {
                 _minerControllerSystem.MinerState.CurrentMinerAction = MinerState.MinerAction.Sleep;

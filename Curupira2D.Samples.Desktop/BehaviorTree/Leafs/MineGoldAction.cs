@@ -17,7 +17,7 @@ namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
             if (_minerControllerSystem.MinerState.CurrentMinerAction != MinerState.MinerAction.Mine)
                 return Failure();
 
-            _elapsedTime += scene.ElapsedGameTime;
+            _elapsedTime += scene.GameTime.ElapsedGameTime;
             if (_elapsedTime >= TimeSpan.FromSeconds(1))
             {
                 _minerControllerSystem.MinerState.Energy = _minerControllerSystem.MinerState.Energy + Random.Shared.Next(1, 5);

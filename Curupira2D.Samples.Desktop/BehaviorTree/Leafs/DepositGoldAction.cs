@@ -17,7 +17,7 @@ namespace Curupira2D.Samples.Desktop.BehaviorTree.Leafs
                 || !_minerControllerSystem.MinerState.IsInventoryFull)
                 return Failure();
 
-            _elapsedTime += scene.ElapsedGameTime;
+            _elapsedTime += scene.GameTime.ElapsedGameTime;
             if (_elapsedTime >= TimeSpan.FromSeconds(0.3))
             {
                 blackboard.Remove("NearbyGoldMine", false);
