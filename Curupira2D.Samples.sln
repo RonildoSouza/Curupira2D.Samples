@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketClient", "WebSocke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Console", "Curupira2D.Samples.Console\Curupira2D.Samples.Console.csproj", "{F5C1D2AB-D4A5-67BC-3875-FAE1FDBBC391}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.WindowsDX", "Curupira2D.Samples.WindowsDX\Curupira2D.Samples.WindowsDX.csproj", "{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.DesktopGL", "Curupira2D.Samples.DesktopGL\Curupira2D.Samples.DesktopGL.csproj", "{4BAA26B2-0C85-0342-0FC6-C1DF02DA51AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.Android", "Curupira2D.Samples.Android\Curupira2D.Samples.Android.csproj", "{CDF799D9-E4A6-433A-165F-1D5FA79FA50C}"
 EndProject

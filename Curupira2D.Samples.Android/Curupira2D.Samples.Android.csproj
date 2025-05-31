@@ -8,6 +8,12 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="..\Curupira2D\src\Curupira2D\Content\DiagnosticsFont.xnb" Link="Content\DiagnosticsFont.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Curupira2D\src\Curupira2D\Content\FontArial18.xnb" Link="Content\FontArial18.xnb" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.3" />
     <PackageReference Include="MonoGame.Framework.Android" Version="3.8.3" />
     <PackageReference Include="Myra" Version="1.5.9" />
