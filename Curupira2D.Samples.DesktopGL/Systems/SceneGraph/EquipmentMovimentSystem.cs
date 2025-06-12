@@ -4,6 +4,7 @@ using Curupira2D.ECS.Systems;
 using Curupira2D.ECS.Systems.Attributes;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Linq;
 
 namespace Curupira2D.Samples.DesktopGL.Systems.SceneGraph
 {
@@ -34,7 +35,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.SceneGraph
 
             for (int i = 0; i < entities.Count; i++)
             {
-                var entity = entities[i];
+                var entity = entities.ElementAt(i);
 
                 var equipmentComponent = entity.GetComponent<EquipmentComponent>();
                 var newPosition = entity.Parent.Position - equipmentComponent.OffsetPosition;

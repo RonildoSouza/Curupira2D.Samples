@@ -1,6 +1,6 @@
-﻿using Curupira2D.Samples.DesktopGL.Systems.SpriteAnimation;
-using Curupira2D.ECS.Components.Drawables;
+﻿using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Samples.DesktopGL.Common.Scenes;
+using Curupira2D.Samples.DesktopGL.Systems.SpriteAnimation;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Curupira2D.Samples.DesktopGL.Scenes

@@ -71,7 +71,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder
                 $"\nMiner Action: {MinerState.CurrentMinerAction}";
         }
 
-        public void Draw(ref IReadOnlyList<Entity> entities)
+        public void Draw(ref IReadOnlyCollection<Entity> entities)
         {
             // DRAW EDGES FOR DEBUG
             var path = MinerState.CurrentMinerAction switch
