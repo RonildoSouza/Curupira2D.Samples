@@ -47,7 +47,7 @@ namespace Curupira2D.Samples.DesktopGL.BehaviorTree.Leafs
             var pointObject = _map.Get<ObjectLayer>("object-positions").Get<PointObject>(pointObjectName);
 
             var start = blackboard.Get<Vector2>("NearbyGoldMineLastPath").Vector2ToGridGraphPoint(_map, scene);
-            var goal = pointObject.ToVector2(_map, scene).Vector2ToGridGraphPoint(_map, scene);
+            var goal = pointObject.ToVector2(_map).Vector2ToGridGraphPoint(_map, scene);
             var path = AStarPathfinder.FindPath(_gridGraph, start, goal);
 
             Debug.WriteLine(_gridGraph.GetDebugPathfinder(start, goal, path, true));

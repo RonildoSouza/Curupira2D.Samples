@@ -43,7 +43,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
             // Moving updates
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Right) || Scene.KeyboardInputManager.IsKeyDown(Keys.D))
             {
-                _characterBodyComponent.ApplyTorque(-_impulse * 5);
+                _characterBodyComponent.ApplyTorque(_impulse * 5);
 
                 if (Scene.Camera2D.Position.X < _characterEntity.Position.X)
                     Scene.Camera2D.Position = new Vector2(cameraPosition.X, Scene.Camera2D.Position.Y);
@@ -51,7 +51,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Left) || Scene.KeyboardInputManager.IsKeyDown(Keys.A))
             {
-                _characterBodyComponent.ApplyTorque(_impulse * 5);
+                _characterBodyComponent.ApplyTorque(-_impulse * 5);
 
                 if (Scene.Camera2D.Position.X > Scene.ScreenCenter.X)
                     Scene.Camera2D.Position = new Vector2(cameraPosition.X, Scene.Camera2D.Position.Y);
@@ -59,10 +59,10 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
 
             // Jumping updates
             if (Scene.KeyboardInputManager.IsKeyPressed(Keys.Up) || Scene.KeyboardInputManager.IsKeyDown(Keys.W) || Scene.KeyboardInputManager.IsKeyPressed(Keys.Space))
-                _characterBodyComponent.ApplyLinearImpulseY(_impulse);
+                _characterBodyComponent.ApplyLinearImpulseY(-_impulse);
 
-            if (_characterEntity.Position.Y < Scene.ScreenCenter.Y)
-                Scene.Camera2D.Position = new Vector2(cameraPosition.X, cameraPosition.Y + Scene.ScreenCenter.Y * 0.45f);
+            if (_characterEntity.Position.Y > Scene.ScreenCenter.Y)
+                Scene.Camera2D.Position = new Vector2(cameraPosition.X, cameraPosition.Y - Scene.ScreenCenter.Y * 0.45f);
         }
     }
 }

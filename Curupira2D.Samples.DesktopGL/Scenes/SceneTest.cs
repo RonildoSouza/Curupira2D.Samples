@@ -70,10 +70,10 @@ namespace Curupira2D.Samples.DesktopGL.Scenes
             Camera2D.Position = _cameraPosition;
 
             if (KeyboardInputManager.IsKeyDown(Keys.OemPlus))
-                Camera2D.Zoom -= new Vector2(0.01f);
+                Camera2D.Zoom -= 0.01f;
 
             if (KeyboardInputManager.IsKeyDown(Keys.OemMinus))
-                Camera2D.Zoom += new Vector2(0.01f);
+                Camera2D.Zoom += 0.01f;
 
             if (KeyboardInputManager.IsKeyPressed(Keys.R))
                 Camera2D.Reset();

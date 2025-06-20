@@ -22,7 +22,7 @@ namespace Curupira2D.Samples.DesktopGL.Scenes
             ShowControlTips("MOVIMENT: Mouse Cursor"
                             + "\nZOOM: Mouse Wheel"
                             + "\nROTATION: Mouse Left Button"
-                            + "\nRESET ROTATION: Mouse Right Button");
+                            + "\nRESET ROTATION AND ZOOM: Mouse Right Button");
 
             base.LoadContent();
         }

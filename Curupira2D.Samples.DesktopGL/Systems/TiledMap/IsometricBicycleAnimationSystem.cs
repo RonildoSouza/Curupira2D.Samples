@@ -52,25 +52,25 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Left))
             {
                 ApplyBicycleIsometricAnimation(IsometricBicycleDirection.Left);
-                direction = new Vector2(0, 1);
+                direction = new Vector2(-1, 0);
             }
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Up))
             {
                 ApplyBicycleIsometricAnimation(IsometricBicycleDirection.Up);
-                direction = new Vector2(1, 0);
+                direction = new Vector2(0, -1);
             }
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Right))
             {
                 ApplyBicycleIsometricAnimation(IsometricBicycleDirection.Right);
-                direction = new Vector2(0, -1);
+                direction = new Vector2(1, 0);
             }
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Down))
             {
                 ApplyBicycleIsometricAnimation(IsometricBicycleDirection.Down);
-                direction = new Vector2(-1, 0);
+                direction = new Vector2(0, 1);
             }
             #endregion
 
@@ -78,7 +78,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Left) && Scene.KeyboardInputManager.IsKeyDown(Keys.Up))
             {
                 ApplyBicycleIsometricAnimation(IsometricBicycleDirection.LeftUp);
-                direction = new Vector2(1, 1);
+                direction = new Vector2(-1, -1);
             }
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Right) && Scene.KeyboardInputManager.IsKeyDown(Keys.Up))
@@ -96,7 +96,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Right) && Scene.KeyboardInputManager.IsKeyDown(Keys.Down))
             {
                 ApplyBicycleIsometricAnimation(IsometricBicycleDirection.RightDown);
-                direction = new Vector2(-1, -1);
+                direction = new Vector2(1, 1);
             }
             #endregion
 

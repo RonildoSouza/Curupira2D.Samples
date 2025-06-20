@@ -17,7 +17,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.SceneGraph
             var staffTexture = Scene.GameCore.Content.Load<Texture2D>("SceneGraph/staff");
 
             var hatEntity = Scene.CreateEntity("hat", default)
-                .AddComponent(new EquipmentComponent(0f, -90f))
+                .AddComponent(new EquipmentComponent(0f, 90f))
                 .AddComponent(new SpriteComponent(hatTexture));
 
             var staffEntity = Scene.CreateEntity("staff", default)

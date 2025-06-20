@@ -15,7 +15,7 @@ namespace Curupira2D.Samples.DesktopGL.Common.Scenes
 
             var fontArial = GameCore.Content.Load<SpriteFont>("FontArial");
             var textComponent = new TextComponent(fontArial, $"{text}", color: color ?? Color.DarkBlue, layerDepth: 1f, scale: scale);
-            var posX = x ?? ScreenWidth * 0.23f;
+            var posX = x ?? textComponent.TextSize.X * scale.X * 0.6f;
             var posY = y ?? ScreenHeight - textComponent.TextSize.Y * scale.Y;
 
             CreateEntity(Guid.NewGuid().ToString()[..6], posX, posY, isCollidable: false)

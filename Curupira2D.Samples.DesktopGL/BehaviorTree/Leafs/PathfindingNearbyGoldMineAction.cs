@@ -3,17 +3,17 @@ using Curupira2D.AI.BehaviorTree.Leafs;
 using Curupira2D.AI.Extensions;
 using Curupira2D.AI.Pathfinding.AStar;
 using Curupira2D.AI.Pathfinding.Graphs;
-using Curupira2D.Samples.DesktopGL.Systems.TiledMap;
 using Curupira2D.ECS;
 using Curupira2D.Extensions.Pathfinding;
 using Curupira2D.Extensions.TiledMap;
+using Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder;
+using Curupira2D.Samples.DesktopGL.Systems.TiledMap;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using TiledLib;
 using TiledLib.Layer;
-using Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder;
 
 namespace Curupira2D.Samples.DesktopGL.BehaviorTree.Leafs
 {

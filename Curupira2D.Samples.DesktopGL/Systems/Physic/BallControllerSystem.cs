@@ -41,13 +41,13 @@ namespace Curupira2D.Samples.DesktopGL.Systems.Physic
                 linearImpulse += new Vector2(-IMPULSE, 0);
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Up) || Scene.KeyboardInputManager.IsKeyDown(Keys.W))
-                linearImpulse += new Vector2(0, IMPULSE);
+                linearImpulse += new Vector2(0, -IMPULSE);
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Right) || Scene.KeyboardInputManager.IsKeyDown(Keys.D))
                 linearImpulse += new Vector2(IMPULSE, 0);
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Down) || Scene.KeyboardInputManager.IsKeyDown(Keys.S))
-                linearImpulse += new Vector2(0, -IMPULSE);
+                linearImpulse += new Vector2(0, IMPULSE);
 
             ballBodyComponent.ApplyLinearImpulse(linearImpulse);
         }

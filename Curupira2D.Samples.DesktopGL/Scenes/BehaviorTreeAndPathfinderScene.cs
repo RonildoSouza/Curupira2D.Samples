@@ -22,7 +22,7 @@ namespace Curupira2D.Samples.DesktopGL.Scenes
             AddSystem<GoldMineControllerSystem>();
             AddSystem(new MapSystem("AI/BehaviorTreeAndPathfinderTiledMap.tmx", "AI/BehaviorTreeAndPathfinderTileset"));
 
-            ShowControlTips(string.Empty, y: 50f, color: Color.White);
+            ShowControlTips(string.Empty, y: ScreenHeight * 0.9f, color: Color.White);
 
             var boatSpriteAnimationComponent = new SpriteAnimationComponent(
                 texture: GameCore.Content.Load<Texture2D>("AI/BoatSpriteSheet"),

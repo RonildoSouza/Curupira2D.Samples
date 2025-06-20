@@ -46,7 +46,7 @@ namespace Curupira2D.Samples.DesktopGL.Common.Systems
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Up) || Scene.KeyboardInputManager.IsKeyDown(Keys.W))
             {
                 ChangePosition = true;
-                direction.Y += 1;
+                direction.Y -= 1;
             }
 
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Right) || Scene.KeyboardInputManager.IsKeyDown(Keys.D))
@@ -58,7 +58,7 @@ namespace Curupira2D.Samples.DesktopGL.Common.Systems
             if (Scene.KeyboardInputManager.IsKeyDown(Keys.Down) || Scene.KeyboardInputManager.IsKeyDown(Keys.S))
             {
                 ChangePosition = true;
-                direction.Y -= 1;
+                direction.Y += 1;
             }
 
             tempPosition += (float)(Velocity * Scene.DeltaTime) * direction.GetSafeNormalize();

@@ -73,7 +73,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.MassivelyMultiplayerOnline
             var lEyePosX = enemyEntity.Position.X - enemySpriteComponent.TextureSize.X * 0.25f;
             var rEyePosX = enemyEntity.Position.X + enemySpriteComponent.TextureSize.X * 0.25f;
 
-            var eyePosY = enemyEntity.Position.Y + enemySpriteComponent.TextureSize.Y * 0.25f;
+            var eyePosY = enemyEntity.Position.Y - 15f;
 
             enemyEyesEntities ??= (
                 Scene.GetEntity($"L_eye_{enemyEntity.UniqueId}"),

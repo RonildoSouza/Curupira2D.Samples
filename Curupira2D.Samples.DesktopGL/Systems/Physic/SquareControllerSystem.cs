@@ -12,7 +12,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.Physic
         {
             var squareTexture = Scene.GameCore.GraphicsDevice.CreateTextureRectangle(50, Color.Black * 0.6f);
 
-            Scene.CreateEntity("square", Scene.ScreenWidth * 0.6f, 100f)
+            Scene.CreateEntity("square", Scene.ScreenWidth * 0.6f, Scene.ScreenHeight - 100f)
                 .SetRotation(45)
                 .AddComponent(
                     new SpriteComponent(squareTexture),

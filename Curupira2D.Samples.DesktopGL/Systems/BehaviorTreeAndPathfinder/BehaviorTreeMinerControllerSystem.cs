@@ -8,7 +8,6 @@ using Curupira2D.Samples.DesktopGL.BehaviorTree.Conditions;
 using Curupira2D.Samples.DesktopGL.BehaviorTree.Leafs;
 using Curupira2D.Samples.DesktopGL.Common.Scenes;
 using Microsoft.Xna.Framework;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder
 {
@@ -47,7 +46,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder
                 .Close()
             .Build(blackboard);
 
-            _textComponent = ((SceneBase)Scene).ShowText(GetTreeStructure(), x: 660f, y: 480f, color: Color.White, scale: new Vector2(0.35f));
+            _textComponent = ((SceneBase)Scene).ShowText(GetTreeStructure(), x: 660f, y: 160f, color: Color.White, scale: new Vector2(0.35f));
         }
 
         public void Update()

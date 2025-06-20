@@ -16,8 +16,7 @@ namespace Curupira2D.Samples.DesktopGL.Scenes.TiledMap
             ShowControlTips("MOVIMENT: WASD"
                             + "\nZOOM: Mouse Wheel"
                             + "\nROTATION: Mouse Left Button"
-                            + "\nRESET ROTATION: Mouse Right Button",
-                            y: 120f);
+                            + "\nRESET ROTATION AND ZOOM: Mouse Right Button");
 
             base.LoadContent();
         }

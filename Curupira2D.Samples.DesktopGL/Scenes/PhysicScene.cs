@@ -1,5 +1,5 @@
-﻿using Curupira2D.Samples.DesktopGL.Systems.Physic;
-using Curupira2D.Samples.DesktopGL.Common.Scenes;
+﻿using Curupira2D.Samples.DesktopGL.Common.Scenes;
+using Curupira2D.Samples.DesktopGL.Systems.Physic;
 
 namespace Curupira2D.Samples.DesktopGL.Scenes
 {
@@ -14,7 +14,7 @@ namespace Curupira2D.Samples.DesktopGL.Scenes
             AddSystem<SquareControllerSystem>();
             AddSystem<BorderControllerSystem>();
 
-            ShowControlTips("MOVIMENT: Keyboard Arrows OR WASD", x: 200f, y: 120f);
+            ShowControlTips("MOVIMENT: Keyboard Arrows OR WASD");
 
             base.LoadContent();
         }

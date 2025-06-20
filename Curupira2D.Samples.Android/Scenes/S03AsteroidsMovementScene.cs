@@ -65,11 +65,11 @@ namespace Curupira2D.Samples.Android.Scenes
             // Change Angle
             if (_touchGamepadButtonsComponent.IsTouched(Buttons.Button02))
             {
-                _bodyComponent.ApplyAngularImpulse(-angularImpulse);
+                _bodyComponent.ApplyAngularImpulse(angularImpulse);
             }
             else if (_touchGamepadButtonsComponent.IsTouched(Buttons.Button03))
             {
-                _bodyComponent.ApplyAngularImpulse(angularImpulse);
+                _bodyComponent.ApplyAngularImpulse(-angularImpulse);
             }
             else
             {
@@ -79,12 +79,12 @@ namespace Curupira2D.Samples.Android.Scenes
             // Change Linear Impulse
             if (_touchGamepadButtonsComponent.IsTouched(Buttons.Button01))
             {
-                _bodyComponent.ApplyLinearImpulse(new Vector2(-linearImpulse * rotationToVector.X, -linearImpulse * rotationToVector.Y));
+                _bodyComponent.ApplyLinearImpulse(new Vector2(linearImpulse * rotationToVector.X, -linearImpulse * rotationToVector.Y));
             }
 
             if (_touchGamepadButtonsComponent.IsTouched(Buttons.Button04))
             {
-                _bodyComponent.ApplyLinearImpulse(new Vector2(linearImpulse / 4 * rotationToVector.X, linearImpulse / 4 * rotationToVector.Y));
+                _bodyComponent.ApplyLinearImpulse(new Vector2(-linearImpulse / 4 * rotationToVector.X, linearImpulse / 4 * rotationToVector.Y));
             }
 
             base.Update(gameTime);

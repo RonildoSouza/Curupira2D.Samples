@@ -71,9 +71,9 @@ namespace Curupira2D.Samples.Android.Scenes
             // Change Angle
             if (_touchJoystickComponent.Direction.X != 0)
             {
-                if (_touchJoystickComponent.Direction.X == -1 && _bodyComponent.AngularVelocity < 0.5f
-                    || _touchJoystickComponent.Direction.X == 1 && _bodyComponent.AngularVelocity > -0.5f)
-                    _bodyComponent.ApplyAngularImpulse(_touchJoystickComponent.Direction.X * -angularImpulse);
+                if (_touchJoystickComponent.Direction.X == 1 && _bodyComponent.AngularVelocity < 0.5f
+                    || _touchJoystickComponent.Direction.X == -1 && _bodyComponent.AngularVelocity > -0.5f)
+                    _bodyComponent.ApplyAngularImpulse(_touchJoystickComponent.Direction.X * angularImpulse);
             }
             else
             {
@@ -85,7 +85,7 @@ namespace Curupira2D.Samples.Android.Scenes
             {
                 _bodyComponent.ApplyLinearImpulse(new Vector2(
                     _touchJoystickComponent.Direction.Y * linearImpulse * rotationToVector.X,
-                    _touchJoystickComponent.Direction.Y * linearImpulse * rotationToVector.Y));
+                    -(_touchJoystickComponent.Direction.Y * linearImpulse * rotationToVector.Y)));
             }
             else
             {

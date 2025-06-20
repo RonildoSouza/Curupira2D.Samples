@@ -22,7 +22,7 @@ namespace Curupira2D.Samples.Android.Common.Scenes
             _returnButtonEntity = CreateEntity(
                 "returnButton",
                 ScreenWidth - returnButtonTexture.Width,
-                ScreenHeight - returnButtonTexture.Height)
+                returnButtonTexture.Height + 10f)
                 .AddComponent(new SpriteComponent(returnButtonTexture))
                 .SetActive(activeReturnButton);
 
@@ -37,12 +37,12 @@ namespace Curupira2D.Samples.Android.Common.Scenes
 
             var touchCollections = TouchPanel.GetState();
 
-            if (!touchCollections.Any())
+            if (touchCollections.Count == 0)
                 return;
 
             TouchLocation = touchCollections.FirstOrDefault();
             TouchLocationRectangle = new Rectangle(
-                (int)TouchLocation.Position.X, (int)InvertPositionY(TouchLocation.Position.Y), 0, 0);
+                (int)TouchLocation.Position.X, (int)TouchLocation.Position.Y, 0, 0);
 
             if (activeReturnButton
                 && TouchLocation.State == TouchLocationState.Released

@@ -1,11 +1,11 @@
-﻿using Curupira2D.Samples.DesktopGL.Common.Systems;
-using Curupira2D.Samples.DesktopGL.Models.MassivelyMultiplayerOnline;
-using Curupira2D.Samples.DesktopGL.Scenes;
-using Curupira2D.ECS;
+﻿using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems;
 using Curupira2D.ECS.Systems.Attributes;
 using Curupira2D.Extensions;
+using Curupira2D.Samples.DesktopGL.Common.Systems;
+using Curupira2D.Samples.DesktopGL.Models.MassivelyMultiplayerOnline;
+using Curupira2D.Samples.DesktopGL.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Newtonsoft.Json;
@@ -41,7 +41,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.MassivelyMultiplayerOnline
             _playerTexture2D = Scene.GameCore.GraphicsDevice.CreateTextureRectangle(Random.Shared.Next(25, 50), Random.Shared.Next(50, 75), _playerColor);
 
             var safeZoneW = Random.Shared.Next(6, 10) / 10.0f;
-            var safeZoneH = Random.Shared.Next(7, 10) / 10.0f;
+            var safeZoneH = Random.Shared.Next(1, 5) / 10.0f;
 
             _playerEntity = Scene.CreateEntity(_playerUniqueId, Scene.ScreenWidth * safeZoneW, Scene.ScreenHeight * safeZoneH).AddComponent(new SpriteComponent(_playerTexture2D));
 
@@ -90,7 +90,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.MassivelyMultiplayerOnline
             var lEyePosX = _playerEntity.Position.X - _playerTexture2D.Width * 0.25f;
             var rEyePosX = _playerEntity.Position.X + _playerTexture2D.Width * 0.25f;
 
-            var eyePosY = _playerEntity.Position.Y + _playerTexture2D.Height * 0.25f;
+            var eyePosY = _playerEntity.Position.Y - 15f;
 
             _playerEyesEntities.Item1.SetPosition(lEyePosX, eyePosY);
             _playerEyesEntities.Item2.SetPosition(rEyePosX, eyePosY);
