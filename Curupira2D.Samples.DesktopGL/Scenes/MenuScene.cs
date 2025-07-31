@@ -1,6 +1,6 @@
 ﻿using AssetManagementBase;
-using Curupira2D.Samples.DesktopGL.Scenes.TiledMap;
 using Curupira2D.Samples.DesktopGL.Common.Scenes;
+using Curupira2D.Samples.DesktopGL.Scenes.TiledMap;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Myra;

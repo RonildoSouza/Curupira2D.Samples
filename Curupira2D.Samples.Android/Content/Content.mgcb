@@ -75,6 +75,9 @@
 /processorParam:TextureFormat=Color
 /build:Common/ReturnButton.png
 
+#begin DiagnosticsFont.xnb
+/copy:DiagnosticsFont.xnb
+
 #begin Sample02/Car.png
 /importer:TextureImporter
 /processor:TextureProcessor

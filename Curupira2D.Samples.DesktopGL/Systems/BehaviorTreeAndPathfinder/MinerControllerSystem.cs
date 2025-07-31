@@ -175,7 +175,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder
         }
 
         public static int MaxEnergy => 100;
-        public static int MaxInventoryCapacity => 3;
+        public static int MaxInventoryCapacity => 10;
         public static float MaxSpeed => 60f;
 
         public int Energy;
