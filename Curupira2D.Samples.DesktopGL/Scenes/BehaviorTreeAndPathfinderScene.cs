@@ -2,7 +2,6 @@
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Samples.DesktopGL.Common.Scenes;
 using Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder;
-using Curupira2D.Samples.DesktopGL.Systems.Camera;
 using Curupira2D.Samples.DesktopGL.Systems.TiledMap;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
