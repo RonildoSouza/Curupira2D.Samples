@@ -1,7 +1,7 @@
-﻿using Curupira2D.Samples.DesktopGL.Systems.Camera;
-using Curupira2D.ECS.Components.Drawables;
+﻿using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.Extensions;
 using Curupira2D.Samples.DesktopGL.Common.Scenes;
+using Curupira2D.Samples.DesktopGL.Systems.Camera;
 using Microsoft.Xna.Framework;
 
 namespace Curupira2D.Samples.DesktopGL.Scenes
