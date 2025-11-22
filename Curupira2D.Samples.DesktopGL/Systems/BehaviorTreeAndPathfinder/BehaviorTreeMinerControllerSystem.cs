@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework;
 
 namespace Curupira2D.Samples.DesktopGL.Systems.BehaviorTreeAndPathfinder
 {
-    [RequiredComponent(typeof(BehaviorTreeMinerControllerSystem), typeof(DumpComponent))]
+    [RequiredComponent(typeof(BehaviorTreeMinerControllerSystem), typeof(DummyComponent))]
     public class BehaviorTreeMinerControllerSystem(IBlackboard blackboard) : ECS.System, ILoadable, IUpdatable
     {
         AI.BehaviorTree.BehaviorTree _behaviorTree;
