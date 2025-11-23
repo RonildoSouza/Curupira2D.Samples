@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.5-develop.13" />
+    <PackageReference Include="MonoGame.Framework.Native" Version="3.8.5-develop.13">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Library.FreeType" Version="2.13.2.2" />
+    <PackageReference Include="MonoGame.Library.MojoShader" Version="1.0.0.3" />
+    <PackageReference Include="MonoGame.Tool.Basisu" Version="1.60.0.3" />
+    <PackageReference Include="MonoGame.Tool.Crunch" Version="1.0.4.5" />
+    <PackageReference Include="MonoGame.Tool.Dxc" Version="1.8.2505.10" />
+    <PackageReference Include="MonoGame.Tool.FFmpeg" Version="7.0.0.9" />
+    <PackageReference Include="MonoGame.Tool.FFprobe" Version="7.0.0.9" />      
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\DesktopGL\UI\Images\AetherPhysics2DHelloWorldScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\BehaviorTreeAndPathfinderScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\CameraScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\IsometricGravityTiledMapScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\IsometricTiledMapScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\MassivelyMultiplayerOnlineScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\PhysicScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\PlatformerTiledMapScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\QuadtreeCheckCollisionScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\SceneGraphScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\SpriteAnimationScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Images\TiledMapWithManyLayersScene.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DesktopGL\UI\Menu.xmmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

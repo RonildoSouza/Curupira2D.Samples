@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32825.248
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSocket", "WebSocket", "{7311327C-472B-413D-9ACF-5DEA84333700}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.GameComponents", "Curupira2D\src\Curupira2D.GameComponents\Curupira2D.GameComponents.csproj", "{124C811C-8AF5-0861-7139-851CD8C0719A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D", "Curupira2D\src\Curupira2D\Curupira2D.csproj", "{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curupira2D.Samples.ContentBuilder", "Curupira2D.Samples.ContentBuilder\Curupira2D.Samples.ContentBuilder.csproj", "{4F63B57C-0EDC-1922-082D-D1DE6B1A3C21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEF76E1A-65DC-ADBD-0864-F7387312CBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F63B57C-0EDC-1922-082D-D1DE6B1A3C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F63B57C-0EDC-1922-082D-D1DE6B1A3C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F63B57C-0EDC-1922-082D-D1DE6B1A3C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F63B57C-0EDC-1922-082D-D1DE6B1A3C21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

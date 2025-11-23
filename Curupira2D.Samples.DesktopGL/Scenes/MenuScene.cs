@@ -1,8 +1,6 @@
 ﻿using AssetManagementBase;
 using Curupira2D.Samples.DesktopGL.Common.Scenes;
 using Curupira2D.Samples.DesktopGL.Scenes.TiledMap;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
 using Myra;
 using Myra.Graphics2D.UI;
 using System.IO;
@@ -11,7 +9,7 @@ namespace Curupira2D.Samples.DesktopGL.Scenes
 {
     class MenuScene : SceneBase
     {
-        private Myra.Graphics2D.UI.Desktop _desktop;
+        private Desktop _desktop;
 
         public override void LoadContent()
         {
@@ -36,21 +34,9 @@ namespace Curupira2D.Samples.DesktopGL.Scenes
             project.Root.FindChildById<Button>("IsometricTiledMapButton").Click += (o, e) => GameCore.SetScene<IsometricTiledMapScene>();
             project.Root.FindChildById<Button>("IsometricGravityTiledMapButton").Click += (o, e) => GameCore.SetScene<IsometricGravityTiledMapScene>();
 
-            _desktop = new Myra.Graphics2D.UI.Desktop { Root = project.Root };
+            _desktop = new Desktop { Root = project.Root };
 
             base.LoadContent();
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            KeyboardInputManager.Begin();
-
-            if (KeyboardInputManager.IsKeyPressed(Keys.T))
-                GameCore.SetScene<SceneTest>();
-
-            KeyboardInputManager.End();
-
-            base.Update(gameTime);
         }
 
         public override void Draw()

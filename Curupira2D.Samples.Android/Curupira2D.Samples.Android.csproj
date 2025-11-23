@@ -1,22 +1,40 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
-    <OutputType>Exe</OutputType>
-    <ApplicationId>com.companyname.Curupira2D.Mobile.Samples</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.4.1" />
-    <PackageReference Include="MonoGame.Framework.Android" Version="3.8.4.1" />
-    <PackageReference Include="Myra" Version="1.5.9" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Curupira2D\src\Curupira2D\Curupira2D.csproj" />
-  </ItemGroup>
-  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
-    <Message Text="Restoring dotnet tools" Importance="High" />
-    <Exec Command="dotnet tool restore" />
-  </Target>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0-android36.0</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<ApplicationId>com.companyname.Curupira2D.Mobile.Samples</ApplicationId>
+		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<SupportedOSPlatformVersion>26.0</SupportedOSPlatformVersion>
+	</PropertyGroup>
+	<ItemGroup>
+	  <AndroidJavaSource Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <AndroidLibrary Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <AndroidNativeLibrary Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <Compile Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <EmbeddedResource Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <JavaSourceJar Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <None Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <ProguardConfiguration Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <TransformFile Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MonoGame.Framework.Android" Version="3.8.5-develop.13" />
+		<PackageReference Include="Myra" Version="1.5.10" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Curupira2D\src\Curupira2D\Curupira2D.csproj" />
+	</ItemGroup>
+	<Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+		<Message Text="Restoring dotnet tools" Importance="High" />
+		<Exec Command="dotnet tool restore" />
+	</Target>
+	<Target Name="BuildContent" BeforeTargets="Build">
+		<PropertyGroup>
+			<ContentOutput>$(ProjectDir)$(OutputPath)</ContentOutput>
+			<ContentTemp>$(ProjectDir)$(IntermediateOutputPath)</ContentTemp>
+			<ContentArgs>build -p $(MonoGamePlatform) -s Assets -o $(ContentOutput) -i $(ContentTemp)</ContentArgs>
+		</PropertyGroup>
+		<MSBuild Projects="..\Curupira2D.Samples.ContentBuilder\Curupira2D.Samples.ContentBuilder.csproj" Targets="Build;Run" Properties="RunArguments=$(ContentArgs);" />
+	</Target>
 </Project>
