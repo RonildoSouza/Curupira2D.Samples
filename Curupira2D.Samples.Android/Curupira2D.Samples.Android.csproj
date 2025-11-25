@@ -8,30 +8,30 @@
 		<SupportedOSPlatformVersion>26.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 	<ItemGroup>
-	  <AndroidJavaSource Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <AndroidLibrary Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <AndroidNativeLibrary Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <Compile Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <EmbeddedResource Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <JavaSourceJar Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <None Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <ProguardConfiguration Remove="obj\Debug\net9.0-android36.0\Content\**" />
-	  <TransformFile Remove="obj\Debug\net9.0-android36.0\Content\**" />
+	  <AndroidAsset Include="Content\**\*.xnb">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </AndroidAsset>
+	</ItemGroup>
+	<ItemGroup>
+	  <AndroidAsset Include="..\..\..\Users\Ronildo\.nuget\packages\aether.physics2d.diagnostics.mg\2.2.0\contentFiles\any\netstandard2.0\Content\DiagnosticsFont.xnb" Link="Content\DiagnosticsFont.xnb">
+	    <Private>False</Private>
+	    <NuGetPackageVersion>2.2.0</NuGetPackageVersion>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <NuGetItemType>Content</NuGetItemType>
+	    <NuGetPackageId>Aether.Physics2D.Diagnostics.MG</NuGetPackageId>
+	    <Pack>false</Pack>
+	  </AndroidAsset>
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MonoGame.Framework.Android" Version="3.8.5-develop.13" />
 		<PackageReference Include="Myra" Version="1.5.10" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\Curupira2D\src\Curupira2D\Curupira2D.csproj" />
+		<ProjectReference Include="..\Curupira2D\src\Curupira2D\Curupira2D.csproj" />
 	</ItemGroup>
-	<Target Name="RestoreDotnetTools" BeforeTargets="Restore">
-		<Message Text="Restoring dotnet tools" Importance="High" />
-		<Exec Command="dotnet tool restore" />
-	</Target>
 	<Target Name="BuildContent" BeforeTargets="Build">
 		<PropertyGroup>
-			<ContentOutput>$(ProjectDir)$(OutputPath)</ContentOutput>
+			<ContentOutput>$(ProjectDir)</ContentOutput>
 			<ContentTemp>$(ProjectDir)$(IntermediateOutputPath)</ContentTemp>
 			<ContentArgs>build -p $(MonoGamePlatform) -s Assets -o $(ContentOutput) -i $(ContentTemp)</ContentArgs>
 		</PropertyGroup>

@@ -1,10 +1,10 @@
-﻿using Curupira2D.Samples.DesktopGL.Models.MassivelyMultiplayerOnline;
-using Curupira2D.Samples.DesktopGL.Scenes;
-using Curupira2D.ECS;
+﻿using Curupira2D.ECS;
 using Curupira2D.ECS.Components.Drawables;
 using Curupira2D.ECS.Systems;
 using Curupira2D.ECS.Systems.Attributes;
 using Curupira2D.Extensions;
+using Curupira2D.Samples.DesktopGL.Models.MassivelyMultiplayerOnline;
+using Curupira2D.Samples.DesktopGL.Scenes;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 
@@ -17,24 +17,26 @@ namespace Curupira2D.Samples.DesktopGL.Systems.MassivelyMultiplayerOnline
         {
             var mmoScene = (MassivelyMultiplayerOnlineScene)Scene;
 
-            mmoScene.WSClient.Subscribe(msg =>
-            {
-                var enemyData = JsonConvert.DeserializeObject<EnemyData>(msg.Text);
-
-                switch (enemyData?.Type)
+            mmoScene.WSClient.Subscribe(
+                msg =>
                 {
-                    case EnemyDataType.Joined:
-                        CreateEnemyEntity(enemyData);
-                        break;
-                    case EnemyDataType.Left:
-                        Scene.RemoveEntity(enemyData.UniqueId);
-                        break;
-                    case EnemyDataType.Message:
-                        CreateEnemyEntity(enemyData);
-                        UpdateEnemyPositions(enemyData.UniqueId, enemyData);
-                        break;
-                }
-            });
+                    var enemyData = JsonConvert.DeserializeObject<EnemyData>(msg.Text);
+
+                    switch (enemyData?.Type)
+                    {
+                        case EnemyDataType.Joined:
+                            CreateEnemyEntity(enemyData);
+                            break;
+                        case EnemyDataType.Left:
+                            Scene.RemoveEntity(enemyData.UniqueId);
+                            break;
+                        case EnemyDataType.Message:
+                            CreateEnemyEntity(enemyData);
+                            UpdateEnemyPositions(enemyData.UniqueId, enemyData);
+                            break;
+                    }
+                },
+                ex => throw ex);
         }
 
         private void CreateEnemyEntity(EnemyData enemyData)

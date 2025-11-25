@@ -22,7 +22,7 @@ namespace Curupira2D.Samples.DesktopGL.Systems.TiledMap
             // Create entity character in scene
             var characterTexture = Scene.GameCore.Content.Load<Texture2D>("TiledMap/IsometricBicycle");
 
-            _spriteAnimationComponent = new SpriteAnimationComponent(characterTexture, 8, 8, 100, AnimateType.PerRow, layerDepth: 0.01f);
+            _spriteAnimationComponent = new SpriteAnimationComponent(characterTexture, 8, 8, 100, AnimateType.PerRow, layerDepth: 0.001f);
             _isometricCharacterBodyComponent = new BodyComponent((characterTexture.Bounds.Size.ToVector2() / 8f).X / 2.2f, EntityType.Dynamic)
             {
                 IgnoreGravity = true,

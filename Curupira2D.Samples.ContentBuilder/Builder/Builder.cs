@@ -15,7 +15,7 @@ var contentCollectionArgs = new ContentBuilderParams()
     Mode = ContentBuilderMode.Builder,
     WorkingDirectory = $"{AppContext.BaseDirectory}../../../", // path to where your content folder can be located
     SourceDirectory = "Assets", // Not actually needed as this is the default, but added for reference
-    Platform = TargetPlatform.Android
+    Platform = TargetPlatform.DesktopGL
 };
 var builder = new Builder();
 

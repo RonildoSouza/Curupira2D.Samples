@@ -41,9 +41,24 @@ namespace WebSocketClient
         public void Subscribe(Action<Message> onNext, Action<Exception> onError, Action onCompleted)
         {
             Client?.MessageReceived
-                .Where(msg => !string.IsNullOrEmpty(msg.Text))
-                .Where(msg => msg.Text.Contains(_channel))
-                .Subscribe(msg => onNext?.Invoke(JsonConvert.DeserializeObject<Message>(msg.Text)), onError, onCompleted);
+                .Where(msg => !string.IsNullOrEmpty(msg?.Text))
+                .Where(msg =>
+                {
+                    if (string.IsNullOrEmpty(msg?.Text))
+                        return false;
+
+                    return msg.Text.Contains(_channel);
+                })
+                .Subscribe(msg =>
+                {
+                    if (string.IsNullOrEmpty(msg?.Text))
+                        return;
+
+                    var message = JsonConvert.DeserializeObject<Message>(msg.Text);
+
+                    if (message is not null)
+                        onNext?.Invoke(message);
+                }, onError, onCompleted);
         }
 
         public void Subscribe(Action<Message> onNext) => Subscribe(onNext, ex => { }, () => { });
@@ -52,8 +67,11 @@ namespace WebSocketClient
 
         public async ValueTask DisposeAsync()
         {
-            await Client?.Stop(System.Net.WebSockets.WebSocketCloseStatus.NormalClosure, string.Empty);
-            Client?.Dispose();
+            if (Client == null)
+                return;
+
+            await Client.Stop(System.Net.WebSockets.WebSocketCloseStatus.NormalClosure, string.Empty);
+            Client.Dispose();
         }
     }
 }
